@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="calculator_style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn-clear" onclick="clearDisplay()">C</button>
+      <button class="btn-func" onclick="backspace()">⌫</button>
+      <button class="btn-func" onclick="appendValue('(')">(</button>
+      <button class="btn-func" onclick="appendValue(')')">)</button>
+
+      <!-- Row 2 -->
+      <button class="btn-func" onclick="appendFunc('sin')">sin</button>
+      <button class="btn-func" onclick="appendFunc('cos')">cos</button>
+      <button class="btn-func" onclick="appendFunc('tan')">tan</button>
+      <button class="btn-operator" onclick="appendValue('/')">÷</button>
+
+      <!-- Row 3 -->
+      <button class="btn-func" onclick="appendFunc('log')">log</button>
+      <button class="btn-func" onclick="appendFunc('sqrt')">√</button>
+      <button class="btn-func" onclick="appendValue('^')">xʸ</button>
+      <button class="btn-operator" onclick="appendValue('*')">×</button>
+
+      <!-- Row 4 -->
+      <button class="btn-number" onclick="appendValue('7')">7</button>
+      <button class="btn-number" onclick="appendValue('8')">8</button>
+      <button class="btn-number" onclick="appendValue('9')">9</button>
+      <button class="btn-operator" onclick="appendValue('-')">−</button>
+
+      <!-- Row 5 -->
+      <button class="btn-number" onclick="appendValue('4')">4</button>
+      <button class="btn-number" onclick="appendValue('5')">5</button>
+      <button class="btn-number" onclick="appendValue('6')">6</button>
+      <button class="btn-operator" onclick="appendValue('+')">+</button>
+
+      <!-- Row 6 -->
+      <button class="btn-number" onclick="appendValue('1')">1</button>
+      <button class="btn-number" onclick="appendValue('2')">2</button>
+      <button class="btn-number" onclick="appendValue('3')">3</button>
+      <button class="btn-func" onclick="appendValue('π')">π</button>
+
+      <!-- Row 7 -->
+      <button class="btn-number" onclick="appendValue('0')">0</button>
+      <button class="btn-number" onclick="appendValue('.')">.</button>
+      <button class="btn-func" onclick="appendValue('e')">e</button>
+      <button class="btn-equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="calculator_script.js"></script>
+</body>
+</html>

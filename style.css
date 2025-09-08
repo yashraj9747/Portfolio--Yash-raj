@@ -1,0 +1,329 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #121212;
+  color: #faeede;
+}
+
+.dark-mode header,
+.dark-mode section,
+.dark-mode footer {
+  background: #1e1e1e;
+}
+
+/* Button styling */
+#dark-toggle {
+  margin-left: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; /* pushes logo left, links center/right */
+  align-items: center;
+  padding: 10px 40px;  /* increased padding for breathing space */
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+/* Logo style */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  margin-right: 40px; /* space between logo and links */
+}
+
+/* Nav links layout */
+.nav-links {
+  display: flex;
+  gap: 25px;  /* spacing between links */
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2fcb1e;
+}
+
+
+/* Toggle button styling */
+#dark-toggle {
+  margin-left: auto;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f0f0f0;
+  color: #333;
+}
+
+#dark-toggle:hover {
+  background: #ff416c;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode header,
+.dark-mode section,
+.dark-mode footer {
+  background: #1e1e1e;
+}
+
+.dark-mode #dark-toggle {
+  background: #333;
+  color: #f5f5f5;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #ebe4d6;
+  color: #333;
+}
+
+/* Navbar */
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff9800;
+  animation: logo-bounce 2s infinite;
+}
+
+@keyframes logo-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* Header Intro */
+.intro {
+  text-align: center;
+  padding: 60px 30px;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("Yashraj.jpg") no-repeat center/cover;
+  color: #fff;
+}
+
+.intro h1 span {
+  color: #ff9800;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* About */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 650px;
+  margin: auto;
+}
+.about-container img {
+  width: 250px;
+  border-radius: 70%;
+  border: 3px solid #000000; /* default (light mode) black border */
+}
+
+/* Dark mode card */
+body.dark-mode .project-box {
+  background: #1e1e1e;   /* dark background */
+  color: #f5f5f5;        /* light text */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Change border color to white in dark mode */
+body.dark-mode .about-container img {
+  border: 3px solid #ffffff;
+}
+
+.projects {
+  background: #d1d1b9; /* light mode */
+  padding: 40px 20px;
+}
+
+body.dark-mode .projects {
+  background: #121212; /* dark mode */
+}
+
+
+/* Skills */
+.skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills li {
+  background: #ff9800;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Projects */
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-box {
+  background: #edead9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.project-box img {
+  width: 100%;
+  display: block;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+}
+
+.project-box h3 {
+  margin: 15px 0;
+  color: #ff9800;
+}
+
+/* Normal (light mode) card */
+.project-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+/* Remove blue color & underline from links inside project cards */
+.project-box a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; /* keeps the pointer so users know it's clickable */
+}
+
+.project-box a:hover {
+  color: black; /* stays black on hover */
+  text-decoration: underline; /* optional: remove this line if you want no underline at all */
+}
+
+
+/* Dark mode card */
+body.dark-mode .project-box {
+  background: #1e1e1e;   /* dark background */
+  color: #f5f5f5;        /* light text */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.projects {
+  background: #f8f8f8; /* light mode */
+  padding: 40px 20px;
+}
+
+body.dark-mode .projects {
+  background: #121212; /* dark mode */
+}
+
+
+
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #000000e7;
+  color: white;
+  font-weight: bold;
+  text-decoration: none; /* removes underline */
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.resume-btn:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+
+/* Contact */
+.contact p {
+  margin: 10px 0;
+}
+
+.contact a {
+  color: #ff9800;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
